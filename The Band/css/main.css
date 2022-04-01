@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.text-white{
+    color: white !important;
+}
+
+/* HEADER */
+.header{
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.nav > li{
+    position: relative;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.nav li a{
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 2px;
+    color: white;
+}
+
+.nav > li:hover > a,
+.subnav li:hover{
+    color: black;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.nav li:hover .subnav{
+    display: block;
+}
+
+.subnav{
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.subnav li{
+    line-height: 38px;
+    width: 140px;
+    height: 38px;
+    padding: 0 16px;
+}
+
+.nav__btn{
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.nav__search{
+    background-color: red;
+    width: 100px;
+    height: 50px;
+}
+
+.nav__search--btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 17px 24px;
+}
+
+.nav__search--btn:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+
+/* SLIDER */
+
+.slider{
+    height: 800px;
+    padding-top: 50px;
+}
+
+.slider__img{
+    width: 100%;
+}
+
+.slider__content--title{
+    position: absolute;
+    color: white;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider__content--subtitle{
+    position: absolute;
+    color: white;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* BAND */
+.band{
+    height: 800px;
+    text-align: center;
+}
+
+.band__title, .tour__title, .contact__title{
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-top: 80px;
+}
+
+.band__description, .tour__description, .contact__description{
+    opacity: 0.6;
+    padding-top: 20px;
+    font-style: italic;
+}
+
+.band__content{
+    width: 770px;
+    padding-top: 20px;
+    text-align: justify;
+    margin: auto;
+    line-height: 1.4;
+}
+
+.band__box{
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.band__name{
+    float: right;
+    width: 33.3%;
+}
+
+.band__name--title{
+    padding-bottom: 20px;
+}
+
+.band__name--img{
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.band__name:nth-child(2){
+    padding: 0 80px;
+}
+
+/* TOUR */
+.tour{
+    height: 800px;
+    text-align: center;
+    background-color: black;
+}
+
+.ticket__list{
+    background-color: white;
+    width: 770px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.ticket__list li{
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.sold-out{
+    background-color: red;
+    padding: 4px 8px;
+    color: white;
+    margin-left: 10px;
+}
+
+.quantity{
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin: -3px 20px 0 0;
+}
+
+.tour__box{
+    width: 770px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.buy__ticket{
+    float: right;
+    width: 240px;
+}
+
+.buy__ticket--img{
+    width: 240px;
+    height: 180px;
+    display: block;
+}
+
+.buy__ticket--content{
+    background-color: white;
+    text-align: left;
+}
+
+.buy__ticket--title{
+    padding: 16px 0 0 12px;
+    font-weight: 700;
+}
+
+.buy__ticket--date{
+    padding: 16px 0 0 12px;
+    opacity: 0.6;
+
+}
+
+.buy__ticket--subtitle{
+    padding: 16px 0 0 12px;
+}
+
+.buy__ticket--btn{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: inline-block;
+    margin: 10px 0 10px 12px;
+}
+
+/* CONTACT */
+.contact{
+    height: 500px;
+    text-align: center;
+}
+
+.contact__content{
+    display: flex;
+    margin-top: 10px;
+}
+
+.contact__box{
+    display: flex;
+    margin: auto;
+    width: 770px;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.contact__text{
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.contact__icon{
+    font-size: 18px;
+}
+
+.contact__two{
+ 
+}
+
+.contact__info{
+    display: flex;
+    width: 100%;
+}
+
+.contact__info--check{
+    width: 180px;
+    height: 40px;
+}
+
+.contact__info--check:nth-child(2){
+    margin-left: 20px;
+}
+
+::placeholder{
+    padding-left: 4px;
+}
+
+.contact__two--full{
+    width: calc(100% - 4px);
+    height: 40px;
+    margin-top: 10px;
+}
+
+.contact__two--btn{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 12px;
+    float: right;
+    margin-top: 20px;
+}
+
+.contact__img{
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* FOOTER */
+
+.footer{
+    height: 150px;
+    margin-top: 830px;
+}
+
+.footer__icon{
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.footer__content{
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.6;
+}
+
+.footer a{
+    color: black;
+}
+
+
+
+
+
+
+
