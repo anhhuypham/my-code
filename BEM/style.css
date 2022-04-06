@@ -2,9 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
+}
   
-  body {
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -173,4 +173,5 @@
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
+
   

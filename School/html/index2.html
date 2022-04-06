@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Pham Anh Huy</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .form__box{
+            width: 600px;
+            margin-top: 10px;
+            padding: 10px 0;
+        }
+
+        .form-header{
+            display: flex;
+            align-items: center;
+        }
+
+        .form-header ion-icon{
+            margin-left: 4px;
+            font-size: 20px;
+        }
+        
+        .form__box:nth-child(1){
+            border-top: 1px solid rgba(153, 153, 153, 0.5);
+        }
+
+        .form__box:nth-child(2){
+            border-top: 1px dashed rgba(153, 153, 153, 0.5);
+        }
+
+        .form__box:nth-child(3){
+            border-top: 1px dashed rgba(153, 153, 153, 0.5);
+            border-bottom: 1px dashed rgba(153, 153, 153, 0.5);
+        }
+
+        .form-content{
+            display: flex;
+            margin-top: 4px;
+            position: relative;
+        }
+
+        img{
+            width: 250px;
+            height: 150px;
+        }
+
+        p{
+            width: calc(100% - 250px);
+            margin-left: 10px;
+        }       
+
+        .form-content-icon{
+            position: absolute;
+            bottom: 0;
+            font-size: 24px;
+            padding: 4px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="form__box">
+                <div class="form-header">
+                    <h3 class="form-title">Nhật Bản sẽ đúc huy chương Olympic 2020 từ smartphone cũ</h3>
+                    <ion-icon name="videocam-outline"></ion-icon>
+                </div>
+            <div class="form-content">
+                <img src="https://icdn.dantri.com.vn/2018/7/12/200813dienthoainhaplauvovypxt-15313738183301753523158.jpg" alt="">
+                <p>Trong nổ lực "xanh hóa", chủ nhà Olympic tiếp theo sẽ tái chế rác thải điện tử, lấy các kim loại quý để đúc huy chương</p>
+            </div>
+        </div>
+        <div class="form__box">
+            <h3 class="form-title">Samsung sắp bán smartphone tân trang</h3>
+            <div class="form-content">
+                <img src="https://imgt.taimienphi.vn/cf/Images/2017/1/ddt/1/7-mau-dien-thoai-chup-anh-dep-ngay-tet.jpg" alt="">
+                <p>Samsung đang lên kế hoạch triển khai chương trình bán điện thoại refurbish (tân trang) trong vài tháng tới</p>
+            </div>
+        </div>
+        <div class="form__box">
+            <h3 class="form-title">Bộ ba smartphone Meize về Việt Nam giá từ 3 triệu đồng</h3>
+            <div class="form-content">
+                <img src="https://beginer.com/wp-content/uploads/2021/01/top-dien-thoai-chup-anh-dep-nhat-2021-1024x576.jpg" alt="">
+                <ion-icon name="camera" class="form-content-icon"></ion-icon>
+                <p>Ngoài Meizu M3s là model có giá rẻ nhất, hãng điện thoại Trung Quộc còn có thêm hai sản phẩm khác là M3 Note màn hình lớn và Pro 6 dùng chíp 10 nhân</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
