@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    padding: 24px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - var(--spacing));
+    flex-shrink: 0;
+    --column: 4;
+    --spacing: 25px
+}
+.card{
+    width: calc(100% / var(--column) - var(--spacing));
+    border-radius: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-left: var(--spacing);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--spacing);
+}
+.card-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+.card-content{
+   /* background-color: red; */
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+}
+.card-top{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card-title{
+    font-size: 22px;
+    font-weight: 500;
+    padding: 24px;
+}
+.card-user{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 24px;
+    margin-top: auto;
+}
+.card-user-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.card-user-info{
+   display: flex;
+   flex-direction: column;
+   padding: 24px;
+}
+.card-user-top{
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+}
+.card-user-top ion-icon{
+    margin-left: 4px;
+    color: #20E3B2;
+    font-size: 20px;
+}
+.card-user-name{
+
+}
+.card-user-game{
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+.card-bottom{
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    margin-top: auto;
+}
+.card-live{
+    display: flex;
+    background-color: coral;
+    color: #fff;
+    padding: 6px 24px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.card-live ion-icon{
+    margin-right: 6px;
+}
+.card-view{
+    color: #999;
+    position: relative;
+}
+
+.card-view::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100rem;
+    background-color: #204eac;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 740px) and (max-width: 1024px){
+    .cards{
+        --column: 2;
+        --spacing: 25px;
+    }
+}
+
+@media (max-width: 739px) {
+    .cards{
+        --column: 1;
+        --spacing: 0px;
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            width: 70%;
+            background-color: #eee;
+            margin: auto;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: calc(100% / 3 - 12px);
+            background-color: #fff;
+            padding: 12px;
+            margin: 12px 0 12px 12px;
+            display: flex;
+            flex-direction: column;
+        }
+        .box img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+            display: block;
+        }
+        .box-content{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .box-title{
+            margin-top: 8px;
+            font-size: 15px;
+        }
+        .box-price{
+            color: coral;
+            font-weight: 700;
+            padding-top: 8px;
+            margin-top: auto;
+            font-size: 18px;
+        }
+        .box-price span{
+            color: coral;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .box-content button{
+            background-color: coral;
+            border: none;
+            padding: 12px;
+            margin-top: 8px;
+        }
+        .box-content button:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="box">
+            <img src="https://ieltscaptoc.com.vn/wp-content/uploads/2021/05/Cac-tinh-tu-mieu-ta-cho-chu-de-Talk-about-your-favorite-food.png">
+            <div class="box-content">
+                <p class="box-title">Level 2 Foood Safety & Hygiene for Catering (including City and Guilds Accredited Certificate)</p>
+                <p class="box-price">From $15 <span>+ VAT</span></p>
+                <button>View course</button>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://techmaster.com.vn/wp-content/uploads/2020/12/schneider-1-1.jpg">
+            <div class="box-content">
+                <p class="box-title">Level 3 Award in the Requirements for Electrical Installations BS 7671: 2008 (2015) inc. Amendment 3 (17th Edition)</p>
+                <p class="box-price">$349.00 <span>+ VAT</span></p>
+                <button>View course</button>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://cdn2.medihub.vn/image/460/w/ImagesUpload/2018/09/15/44eb6185-4c4b-4bb1-8aa5-566db17f8675_tu-a-z-cach-ho-hap-nhan-tao-cho-tre-em-va-nguoi-lon.jpg" >
+            <div class="box-content">
+                <p class="box-title">First Aid - The Primary Survey</p>
+                <p class="box-price">$15.00 <span>+ VAT</span></p>
+                <button>View course</button>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="https://sotavn.com/media/stories/images/tim-hieu-ve-trai-nghiem-nguoi-dung-UX-va-giao-dien-nguoi-dung-UI%201.jpg" >
+            <div class="box-content">
+                <p class="box-title">Equality. Diversity and Inclusion in the Workplace</p>
+                <p class="box-price">$30.00 <span>+ VAT</span></p>
+                <button>View course</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://cdn.tgdd.vn/Files/2021/06/29/1364206/gcfglobal_1280x720-800-resize.png" >
+            <div class="box-content">
+                <p class="box-title">An introduction to Safeguarding Children</p>
+                <p class="box-price">$30.00 <span>+ VAT</span></p>
+                <button>View course</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="http://shop.melearning.co.uk/wp-content/uploads/2020/07/Safeguarding-children-refresher.png" >
+            <div class="box-content">
+                <p class="box-title">Safeguarding Children Refresher</p>
+                <p class="box-price">$30.00 <span>+ VAT</span></p>
+                <button>View course</button>    
+            </div>
+        </div>
+        
+    
+    </div>
+    
+</body>
+</html>

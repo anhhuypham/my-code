@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        .cards{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding: 0 24px;
+        }
+        .card{
+            width: calc(100% / 6);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+            position: relative;
+        }
+        .card img{
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin: auto;
+        }
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-content h3{
+            text-align: center;
+            margin: 12px auto;
+            font-size: 14px;
+            width: 78%;
+        }
+        .card-product{
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            margin-top: auto;
+        }
+        .card-price{
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 8px 0 16px 0;
+        }
+
+        .card-price span{
+            color: #333;
+        }
+
+        .sale::before{
+            content: "KHUYẾN MÃI";
+            position: absolute;
+            clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+            background-color: forestgreen;
+            width: 80px;
+            height: 22px;
+            font-size: 10px;
+            color: #fff;
+            text-align: center;
+            line-height: 23px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .card:hover{
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .heading {
+            color: black;
+            border-bottom: 4px solid #eee;
+            margin: 0 24px;
+            font-size: 18px;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .heading::before{
+            content: "";
+            position: absolute;
+            width: 140px;
+            height: 4px;
+            background-color: red;
+            bottom: -4px;
+            left: 0;
+        }
+    </style>
+</head>
+<body> 
+    <div class="heading">
+        <p>SẢN PHẨM MỚI</p>
+    </div>
+    <div class="cards">
+        <div class="card sale">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_GlwF30uDfvZN2ySxfOfsjY4YvE5yvoY0em08wJmwkvplMJ__248oXtEcfaBTaumw-fxi7Lt62OjDeF7Tz4C6bJOmKOlHGg&usqp=CAE" alt="">
+            <div class="card-content">
+                <h3>MOBILE SAMSUNG GALAXY J1 MINI - J105 ( WHITE )</h3>
+                <p class="card-product">Mã sản phẩm: 46368</p>
+                <p class="card-price">1.790.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_GlwF30uDfvZN2ySxfOfsjY4YvE5yvoY0em08wJmwkvplMJ__248oXtEcfaBTaumw-fxi7Lt62OjDeF7Tz4C6bJOmKOlHGg&usqp=CAE" alt="">
+            <div class="card-content">
+                <h3>MOBILE SAMSUNG GALAXY J1 2016 - J120H ( BLACK )</h3>
+                <p class="card-product">Mã sản phẩm: 46053</p>
+                <p class="card-price">2.540.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_GlwF30uDfvZN2ySxfOfsjY4YvE5yvoY0em08wJmwkvplMJ__248oXtEcfaBTaumw-fxi7Lt62OjDeF7Tz4C6bJOmKOlHGg&usqp=CAE" alt="">
+            <div class="card-content">
+                <h3>MOBILE SAMSUNG GALAXY J1 MINI - J105 ( GOLD )</h3>
+                <p class="card-product">Mã sản phẩm: 46366</p>
+                <p class="card-price">1.790.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_GlwF30uDfvZN2ySxfOfsjY4YvE5yvoY0em08wJmwkvplMJ__248oXtEcfaBTaumw-fxi7Lt62OjDeF7Tz4C6bJOmKOlHGg&usqp=CAE" alt="">
+            <div class="card-content">
+                <h3>MOBILE SAMSUNG GALAXY J1 MINI - J105 ( BLACK )</h3>
+                <p class="card-product">Mã sản phẩm: 46367</p>
+                <p class="card-price">1.790.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_GlwF30uDfvZN2ySxfOfsjY4YvE5yvoY0em08wJmwkvplMJ__248oXtEcfaBTaumw-fxi7Lt62OjDeF7Tz4C6bJOmKOlHGg&usqp=CAE" alt="">
+            <div class="card-content">
+                <h3>APPLE MACBOOK PRO RETINA 15 INCH 256G-MJLQ2 ZP/B MIDDLE 2015</h3>
+                <p class="card-product">Mã sản phẩm: 40765</p>
+                <p class="card-price">42.990.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://c1.neweggimages.com/ProductImage/34-735-257-01.jpg" alt="">
+            <div class="card-content">
+                <h3>MAY TINH BANG MICROSOFT SURFACE PRO 3 256GB(CORE I7)</h3>
+                <p class="card-product">Mã sản phẩm: 38929</p>
+                <p class="card-price">31.990.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_GlwF30uDfvZN2ySxfOfsjY4YvE5yvoY0em08wJmwkvplMJ__248oXtEcfaBTaumw-fxi7Lt62OjDeF7Tz4C6bJOmKOlHGg&usqp=CAE" alt="">
+            <div class="card-content">
+                <h3>MTB SAM SUNG GALAXY TAB E - SM T561Y (BLACK)</h3>
+                <p class="card-product">Mã sản phẩm: 43113</p>
+                <p class="card-price">5.790.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://phuongtung.vn/pt/images/thumbnails/246/250/detailed/2/nz_SM-T719YZWEXNZ_000000027_Combination_white.jpg" alt="">
+            <div class="card-content">
+                <h3>MTB SAM SUNG GALAXY TAB S2 SM - T815Y (WHITE)</h3>
+                <p class="card-product">Mã sản phẩm: 42493</p>
+                <p class="card-price">13.490.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="http://img.websosanh.vn/v2/users/root_product/images/may-tinh-bang-samsung-galaxy/faZB_Vr2n_PG.jpg" alt="">
+            <div class="card-content">
+                <h3>MTB SAM SUNG GALAXY TAB4 7.0 - T231 (WHITE)</h3>
+                <p class="card-product">Mã sản phẩm: 35704</p>
+                <p class="card-price">4.350.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/276/may-tinh-bang-samsung-galaxy-tab-3-v-sm-t116-den-10021135.jpg" alt="">
+            <div class="card-content">
+                <h3>MTB SAM SUNG GALAXY TAB3 V - T116 (BLACK)</h3>
+                <p class="card-product">Mã sản phẩm: 39151</p>
+                <p class="card-price">3.190.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://img.websosanh.vn/v2/users/root_product/images/may-tinh-bang-samsung-galaxy/j0tDGxnEoSfa.jpg?compress=85" alt="">
+            <div class="card-content">
+                <h3>MTB SAMSUNG GALAXY TAB3 V - T116 (WHITE)</h3>
+                <p class="card-product">Mã sản phẩm: 38995</p>
+                <p class="card-price">3.190.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+        <div class="card sale">
+            <img src="https://cdn.nguyenkimmall.com/images/companies/1/vien-thong/asus/may-tinh-bang-asus-zenpad-7-z370cg-trang-1.jpg" alt="">
+            <div class="card-content">
+                <h3>MTB ASUS ZENFAD 7.0 - Z380CG (WHITE)</h3>
+                <p class="card-product">Mã sản phẩm: 42635</p>
+                <p class="card-price">3.990.000 <span>VNĐ</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

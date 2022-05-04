@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cards{
+    padding: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+.card{
+    width: calc(100% / 6);
+    border: 2px solid #eee;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+.card-content{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card-content h3{
+    font-size: 15px;
+    text-align: center;
+    width: 70%;
+    margin: 12px auto;
+}
+.card-product{
+    font-size: 13px;
+    color: #c4c9c5;
+    text-align: center;
+    margin-top: auto;
+}
+.card-price{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 8px;
+}
+
+.card-price span{
+    color: black;
+}
+
+.card-sale{
+    position: absolute;
+    background-color: #228c20;
+    color: #fff;
+    font-size: 10px;
+    padding: 6px;
+    top: 20px;
+}
+
+.card-sale::before{
+    content: "";
+    position: absolute;
+    border-width: 11.6px 14px;
+    border-style: solid;
+    border-color: transparent transparent transparent #228c20; 
+    top: 0; 
+    right: -28px;
+}
+
+/* .card:hover{
+    opacity: 0.5;
+    cursor: pointer;
+} */
+
+.heading{
+    padding: 12px 0;
+    border-bottom: 4px solid #eee;
+    margin: 12px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.heading::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 4px;
+    background-color: red;
+    bottom: -4px;
+    left: 0;
+}
+
+
