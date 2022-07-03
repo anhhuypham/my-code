@@ -1,27 +1,146 @@
 *{
-    margin: 0;
     padding: 0;
-}
-nav ul{
-    list-style: none;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-nav ul li{
-    width: 120px;
-    line-height: 50px;
+body{
+    background-color: #eee;
+    position: relative;
+}
+
+.nav{
+    background-color: #fff;
+    position: absolute;
     display: inline-block;
-    text-align: center;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 32px 24px;
 }
 
- nav ul li a {
-    color: #333;
-    border: 1px solid #333;
-    padding: 3px 15px;
-    text-decoration: none;
-    display: block;
+.nav__main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-nav ul li a:hover{
-    background-color: #888;
+.nav__main ion-icon{
+    color: #4726cf;
+    font-size: 30px;
 }
 
+.nav__main-title{
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+.nav__content{
+    list-style-type: none;
+    margin-top: 32px;
+}
+
+.nav__content-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 32px;
+    padding: 12px 100px 12px 12px;
+    transition: all 0.4s;
+    border-radius: 4px;
+}
+
+.nav__content-item:hover{
+    cursor: pointer;
+    background-color: #faf8fd;
+}
+
+.nav__content-title{
+    margin-left: 12px;
+}
+
+.nav__content-item.active{
+    background-color: #255df8;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.nav__content-noti{
+    display: none;
+}
+
+@media (max-width: 740px) {
+    .nav{
+        padding: 12px 12px;
+    }
+    .nav__main-title,
+    .nav__content-title{
+        font-size: 0;
+        padding: 0;
+    }
+
+    .nav__main{
+        /* justify-content: center; */
+        display: block;
+        text-align: center;
+    }
+
+    .nav__content-item{
+        display: block;
+        justify-content: center;
+        padding: 16px 18px;
+        position: relative;
+    }
+
+    .nav__content-item ion-icon{
+        font-size: 18px;
+    }
+
+    .nav__content-item:hover .nav__content-noti{
+        display: block;
+    }
+
+    .nav__content-item.active:hover .nav__content-noti{
+        display: none;
+    }
+
+    .nav__content-noti{
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: -100px;
+        transform: translateY(-50%);
+        background-color: #12083c;
+        width: 80px;
+        padding: 12px 0;
+        text-align: center;
+        border-radius: 8px;
+        color: #fff;
+    }
+
+    .nav__content-noti::before{
+        content: "";
+        position: absolute;
+        border-width: 20px 20px;
+        border-style: solid;
+        border-color: transparent #12083c transparent transparent;
+        top: 0;
+        left: -25px;
+        z-index: -1;
+    }
+}
+
+.blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.red {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    top: 50px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            border: 1px solid #333;
+            box-sizing: border-box;
+            width: 40%;
+            position: relative;
+            margin: 50px auto;
+        }
+        span{
+            position: absolute;
+            top: -12px;
+            left: 50px;
+            font-size: 20px;
+            background-color: #fff;
+            padding: 0 12px;
+        }
+        .flex{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 4px 16px;
+        }
+        button{
+            margin: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <span>Tam Giác</span>
+        <div class="flex" style="margin-top: 16px">
+            <label for="first">Nhập a:</label>
+            <input type="text" id="first"><br>
+        </div>
+        <div class="flex">
+            <label for="second">Nhập b:</label>
+            <input type="text" id="second"><br>
+        </div>
+        <div class="flex">
+            <label for="third">Nhập c:</label>
+            <input type="text" id="third" ><br>
+        </div>
+        <div class="flex">
+            <label for="result">Kết quả: </label>
+            <input id="result"></input> 
+        </div>
+        <button id="btn">Kiểm tra</button>
+    </div>
+</body>
+<script> 
+    document.getElementById("btn").addEventListener("click", function() {  
+        let a = document.getElementById("first").value;
+        let b = document.getElementById("second").value;
+        let c = document.getElementById("third").value;    
+        if(a == '' || b== '' || c==''){
+            alert('Vui lòng nhập độ dài cạnh của tam giác')
+            return;
+        }
+        a = parseInt(a);
+        b = parseInt(b);
+        c = parseInt(c);
+        if(a < (b+c) && b < (a+c) && c < (a+b)) {
+            var cv = a + b + c;
+            var p =  (a+b+c) / 2;
+            var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+            var num = s.toFixed(2);
+            document.getElementById("result").value = "Chu vi tam giác: " + cv + ", Diện tích tam giác: " + num;
+        } else {
+            document.getElementById("result").value = a + ", " + b + ", " + c +" không phải là 3 cạnh của tam giác";
+        }
+    });
+</script>
+</html>

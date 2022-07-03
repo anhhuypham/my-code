@@ -201,7 +201,7 @@ body{
 .button span:nth-child(2){
     top: 0;
     right: 0;
-    width:2px;
+    width: 2px;
     height: 0;
     transition-delay: 0.5s;
 }

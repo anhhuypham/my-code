@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./main.css"> -->
+    <link rel="stylesheet" href="./The Band/font/themify-icons/themify-icons.css">
+    <title>Document</title>
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        font-family:'Courier New', Courier, monospace;
+        }
+        .header{
+            height: 50px;
+            background-color: #e7e8ea;
+            margin: 100px 20px;
+            width: 50%;
+            margin: 100px auto;
+            border-left: 3px soild black;
+        }
+
+        .nav{
+            display: flex;
+            /* justify-content: center;
+            align-items: center; */
+        }
+        .nav > li{
+            position: relative;
+            display: inline-block;
+            line-height: 50px;
+            padding: 0 10px;
+            border-left: 3px soild black;
+            
+        }
+
+        .nav li a{
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            padding: 0 20px;
+            color: black;
+        }
+
+        .nav > li:hover > a {
+            cursor: pointer;
+            border-bottom: 1px soild black;
+            color:rgb(21, 148, 148);
+            opacity:0.5;
+        }
+
+        .nav__btn{
+            font-size: 12px;
+            line-height: 50px;
+            margin-left: 4px;
+        }
+        .Our Menu:hover{
+            color: black !important;
+            
+        }
+        .subnav > li:hover {
+            background-color: #e7e8ea;
+            cursor: pointer;
+            opacity: 0.6;
+            border-bottom: 1px soild black;
+        }
+
+        .nav li:hover .subnav{
+            display: block;
+            opacity:0.5;
+        }
+
+        .subnav{
+            position: absolute;
+            display: none;
+            list-style-type: none;
+            color: black;
+            background-color: #e7e8ea;
+            border-bottom: 2px solid black;
+        }
+
+        .subnav li{
+            line-height: 38px;
+            width: 200px;
+            height: 38px;
+            padding: 0 16px;
+            color: black;
+        }
+        .subnav li:hover .newnav{
+            display: block;
+        }
+
+        .newnav li:hover {
+            color: #2cccff;
+        }
+        .newnav{
+            display: none;
+            position: absolute;
+            bottom: -2px;
+            background-color: #e7e8ea;
+            left: 232px;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+        }
+
+        .newnav li{
+            width: 200px;
+            list-style-type: none;
+        }
+
+        .seperate::after{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 80%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: black;
+            
+        }
+                
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="nav">
+            <li class="seperate"><a href="">Home</a></li>
+            <li class="seperate">
+                <a class="Our Menu" href="">
+                    Our Menu
+                    <i class="ti-angle-down nav__btn"></i>
+                </a>
+                <ul class="subnav">
+                    <li>Coffee</li>
+                    <li>
+                        Cupcakes
+                        <ul class="newnav">
+                            <li>Chocolate</li>
+                            <li>vanilla</li>
+                        </ul>
+                    </li>
+                    <li>Desserts</li>
+                </ul>
+            </li>
+            <li class="seperate"><a href="">Blog</a></li>
+            <li class="seperate"><a href="">Contact</a></li>
+            <li class="seperate"><a href="">Theme Info</a></li>
+        </ul>
+    </div>
+</body>
+</html>

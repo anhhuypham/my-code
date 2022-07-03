@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.boxed{
+    width: 100px;
+    height: 100px;
+    border-radius: 100rem;
+    background-color: #2cccff;
+    margin: 25px;
+    animation: moving 10s linear infinite;
+    position: relative;
+}
+
+@keyframes moving {
+    0%{
+        top: 0;
+        left: 0;
+    }
+
+    25%{
+        top: 0;
+        left: 300px;
+        background-color: #F62682;
+    }
+
+    50%{
+       left: 300px;
+       top: 100px;
+       background-color: burlywood;
+    }
+
+    75%{
+        top: 100px;
+        left: 0;
+        background-color: #f02c12;
+    }
+    100%{
+        top: 0;
+        left: 0;
+        background-color: #6A5AF9;
+    }
+}
+
